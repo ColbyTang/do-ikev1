@@ -14,13 +14,28 @@
 
 ### 插播广告
 
-为了在 iPhone (iOS 8+) 上更方便地开关你的 IKEv1 微屁恩连接，你可以购买 [VPN On 的 App Store 版](https://itunes.apple.com/app/vpn-on/id951344279)，或者使用[自己从源码编译的版本](https://github.com/lexrus/VPNOn)。
+为了在 iPhone (iOS 8+) 上更方便地开关你的 IKEv1 微屁恩连接，你可以购买我开发的 [VPN On](https://itunes.apple.com/app/vpn-on/id951344279)。虽然我已经公开了[它的 Swift 源码](https://github.com/lexrus/VPNOn)，但是编译它是一件相当麻烦的事情。
+
+[<img src="https://cloud.githubusercontent.com/assets/219689/5575342/963e0ee8-9013-11e4-8091-7ece67d64729.png" width="135" height="40" alt="AppStore"/>](https://itunes.apple.com/app/vpn-on/id951344279)
 
 ### 安装
 
 点击安装按钮即可开启轻松愉快的安装过程：
+
 [![Install on DigitalOcean](http://installer.71m.us/button.svg)](http://installer.71m.us/install?url=https://github.com/lexrus/do-ikev1)
+
 如果只装 IKEv1，用 512mb 完全够用。Region 选 Singapore 1 和 San Francisco 1 连接速度都不错。
+
+### 修改默认帐号
+
+安装成功后，默认的帐号是:
+
+```
+Account: a_secret_vpn_username
+Password: a_secret_vpn_password
+Secret(PSK): a_long_long_psk
+```
+如果想改的话，用 ssh 登录这台服务器，修改 /etc/ipsec.secret 后，`ipsec restart` 重启 IKEv1 服务。
 
 ### 赞助
 
