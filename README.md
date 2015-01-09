@@ -2,7 +2,7 @@
 
 [![Install on DigitalOcean](http://installer.71m.us/button.svg)](http://installer.71m.us/install?url=https://github.com/lexrus/do-ikev1)
 
-> 这是一个 [do-install-button](https://github.com/seven1m/do-install-button) 配置，基于 [vpn-deploy-playbook](https://github.com/lexrus/vpn-deploy-playbook) 实现，虽然用的时候完全不需要知道它们是啥，但是万一遇到问题可以传送过去看看。
+> 这是一个 [do-install-button](https://github.com/seven1m/do-install-button) 配置，能使用 [DigitalOcean] 快速部署 Cisco IPSec(又名 IPSec IKEv1) 服务器。配置脚本基于 [vpn-deploy-playbook](https://github.com/lexrus/vpn-deploy-playbook) 实现。虽然用的时候完全不需要知道它们是啥，但是万一遇到问题可以让男朋友传送过去研究一下帮你解决。
 
 ### 基本要求
 
@@ -24,7 +24,7 @@
 
 [![Install on DigitalOcean](http://installer.71m.us/button.svg)](http://installer.71m.us/install?url=https://github.com/lexrus/do-ikev1)
 
-如果只装 IKEv1，用 512mb 完全够用。Region 选 Singapore 1 和 San Francisco 1 连接速度都不错。
+如果只装 IPSec IKEv1，用 512MB 完全够用。Region 选 Singapore 1 和 San Francisco 1 连接速度都不错。
 
 ### 修改默认帐号
 
@@ -39,5 +39,18 @@ Secret(PSK): a_long_long_psk
 
 ### 赞助
 
-欢迎请我喝咖啡，我的 [PayPal](https://www.paypal.com) 和[支付宝](https://www.alipay.com)帐号都是: `lexrus@gmail.com`
+欢迎请我喝咖啡，我的 [PayPal](https://www.paypal.com) 和 [支付宝](https://www.alipay.com) 帐号都是: `lexrus@gmail.com`
+
+### 协议
+
+本配置遵循:
+```
+『有问题问你男朋友』协议
+2015 年 1 月修订版
+Lex Tang (https://twitter.com/lexrus)
+
+使用者不得任意修改源码中任何一个字符。
+使用过程中遇到问题先问谷歌，然后知乎，再问男友。
+因正常使用造成的任何损失由男朋友承担。
+```
 
