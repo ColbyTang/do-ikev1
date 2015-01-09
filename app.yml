@@ -4,14 +4,8 @@ name: ikev1
 image: ubuntu-14-04-x64
 min_size: 512mb
 config:
-  #cloud-config
-  users:
-    - name: ikev1
-      groups: sudo
-      shell: /bin/bash
-      sudo: ['ALL=(ALL) NOPASSWD:ALL']
   packages:
     - git
     - ansible
   runcmd:
-    - su -l ikev1 -c "cd /home/ikev1 && git clone https://github.com/lexrus/vpn-deploy-playbook.git && cd vpn-deploy-playbook && cp group_vars/ipsec.yml{.example,} && ansible-playbook ipsec.yml -i ansible_hosts.local"
+    - mkdir -p /opt/ikev1 && cd /opt/ikev1 && git clone https://github.com/lexrus/vpn-deploy-playbook.git && cd vpn-deploy-playbook && cp group_vars/ipsec.yml{.example,} && ansible-playbook ipsec.yml -i ansible_hosts.local --skip-tags=common,nginx
