@@ -8,4 +8,4 @@ config:
     - git
     - ansible
   runcmd:
-    - mkdir -p /opt/ikev1 && cd /opt/ikev1 && git clone https://github.com/lexrus/vpn-deploy-playbook.git && cd vpn-deploy-playbook && cp group_vars/ipsec.yml{.example,} && ansible-playbook ipsec.yml -i ansible_hosts.local --skip-tags=common,nginx
+    - mkdir -p /opt/ikev1 && cd /opt/ikev1 && git clone https://github.com/lexrus/vpn-deploy-playbook.git && cd vpn-deploy-playbook && cp group_vars/ipsec.yml.example group_vars/ipsec.yml && ansible-playbook ipsec.yml -i ansible_hosts.local --skip-tags=common,nginx
